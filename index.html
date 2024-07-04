@@ -1,788 +1,472 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--   owl fontawesome   -->
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-  <!--   owl fontawesome   -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quazi Atin Islam - Pentester</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;700;800&display=swap"
+        rel="stylesheet">
 
-  <!--   css file   -->
-  <link rel="stylesheet" href="css/style.css">
-  <!--   css file   -->
+    <link rel="stylesheet" href="styles/portfolio.css">
+    <script src="https://kit.fontawesome.com/f056a62cc9.js" crossorigin="anonymous"></script>
+	<style>
+		
+/* common shared styles*/
+body {
+    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
 
+.text-primary {
+    color: #FD6E0A;
+}
 
-  <!--   owl carousel   -->
-  <link rel="stylesheet" href="owl.carousel.css">
-  <link rel="stylesheet" href="owl.theme.default.min.css">
-  <link rel="shortcut icon" type="x-icon" href="image/ui.png">
-  <script src="jquery.js" charset="utf-8"></script>
-  <script src="jquery3.4.1.min.js" charset="utf-8"></script>
-  <script src="owl.carousel.js" charset="utf-8"></script>
-  <!--   owl carousel   -->
-  <title>My Responsive Parsonal Portfolio Website</title>
-  <style>
-/**
- * Owl Carousel v2.3.4
- * Copyright 2013-2018 David Deutsch
- * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
- */
-/*
- *  Owl Carousel - Core
- */
-.owl-carousel {
-  display: none;
-  width: 100%;
-  -webkit-tap-highlight-color: transparent;
-  /* position relative and z-index fix webkit rendering fonts issue */
-  position: relative;
-  z-index: 1; }
-  .owl-carousel .owl-stage {
-    position: relative;
-    -ms-touch-action: pan-Y;
-    touch-action: manipulation;
-    -moz-backface-visibility: hidden;
-    /* fix firefox animation glitch */ }
-  .owl-carousel .owl-stage:after {
-    content: ".";
+.btn-primary {
+    border-radius: 5px;
+    background: #FD6E0A;
+    border: 0;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 15px 35px;
+}
+
+.section-title {
+    color: #181818;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.section-description {
+    color: #757575;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* nav related styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 200px;
+}
+
+.nav-title {
+    color: #181818;
+    font-size: 45px;
+    font-weight: 800;
+}
+
+nav>ul {
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    list-style: none;
+    margin-right: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #474747;
+}
+
+/* header related styles */
+.header {
+    background-color: #FFF8F3;
+    background-image: url('../images/header_bg.png');
+    background-repeat: no-repeat;
+    background-position: bottom right, top left;
+}
+
+.banner {
+    padding: 30px 30px 0px 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner-content {
+    max-width: 500px;
+}
+
+.banner .profile-pic {
+    width: 500px;
+}
+
+.banner-greeting {
+    font-size: 45px;
+    color: #474747;
+    margin-bottom: 0;
+}
+
+.banner-title {
+    font-size: 85px;
+    font-weight: 700;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+/* main section styles */
+main {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+main section {
+    margin-top: 130px;
+}
+
+/* about section styles */
+.about {
+    padding: 130px;
+    border-radius: 10px;
+    background: #FFF8F3;
+    margin: 130px 0;
+}
+
+.about-info-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-info {
+    text-align: center;
+}
+
+/* skills related styles */
+
+#what-i-do-description {
+    padding: 30px 150px;
+}
+
+.skills-container {
+    display: flex;
+    gap: 24px;
+}
+
+.skill {
+    padding: 30px;
+
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 6px 50px 0px rgba(0, 0, 0, 0.06);
+}
+
+.skill-description {
+    color: #757575;
+}
+
+/* Resume Section styles */
+.resume-column-title {
+    color: #474747;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.resume-container {
+    display: flex;
+    gap: 50px;
+}
+
+.resume-item-title {
+    color: #474747;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.resume-item-institute {
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+.resume-item-institute,
+.resume-item-description {
+    color: #757575;
+}
+
+.resume-container hr {
+    margin: 30px;
+}
+
+.download-cv {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* footer style */
+footer {
+    display: flex;
+    gap: 100px;
+    background: #FFF8F3;
+    margin-top: 100px;
+    padding: 130px 200px;
+}
+
+.footer-column {
+    width: 50%;
+}
+
+.social-links a {
+    margin-right: 25px;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+textarea {
     display: block;
-    clear: both;
-    visibility: hidden;
-    line-height: 0;
-    height: 0; }
-  .owl-carousel .owl-stage-outer {
-    position: relative;
-    overflow: hidden;
-    /* fix for flashing background */
-    -webkit-transform: translate3d(0px, 0px, 0px); }
-  .owl-carousel .owl-wrapper,
-  .owl-carousel .owl-item {
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0); }
-  .owl-carousel .owl-item {
-    position: relative;
-    min-height: 1px;
-    float: left;
-    -webkit-backface-visibility: hidden;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none; }
-  .owl-carousel .owl-item img {
-    display: block;
-    width: 100%; }
-  .owl-carousel .owl-nav.disabled,
-  .owl-carousel .owl-dots.disabled {
-    display: none; }
-  .owl-carousel .owl-nav .owl-prev,
-  .owl-carousel .owl-nav .owl-next,
-  .owl-carousel .owl-dot {
-    cursor: pointer;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none; }
-  .owl-carousel .owl-nav button.owl-prev,
-  .owl-carousel .owl-nav button.owl-next,
-  .owl-carousel button.owl-dot {
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 0 !important;
-    font: inherit; }
-  .owl-carousel.owl-loaded {
-    display: block; }
-  .owl-carousel.owl-loading {
-    opacity: 0;
-    display: block; }
-  .owl-carousel.owl-hidden {
-    opacity: 0; }
-  .owl-carousel.owl-refresh .owl-item {
-    visibility: hidden; }
-  .owl-carousel.owl-drag .owl-item {
-    -ms-touch-action: pan-y;
-        touch-action: pan-y;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none; }
-  .owl-carousel.owl-grab {
-    cursor: move;
-    cursor: grab; }
-  .owl-carousel.owl-rtl {
-    direction: rtl; }
-  .owl-carousel.owl-rtl .owl-item {
-    float: right; }
+    margin-bottom: 25px;
+    padding: 18px 35px;
+    color: #757575;
+    border-radius: 5px;
+    background: #FFF;
+    border: 0;
+    width: 100%;
+}
 
-/* No Js */
-.no-js .owl-carousel {
-  display: block; }
+/* responsive styles */
 
-/*
- *  Owl Carousel - Animate Plugin
- */
-.owl-carousel .animated {
-  animation-duration: 1000ms;
-  animation-fill-mode: both; }
+/* mobile devices */
+.hide {
+    display: none;
+}
 
-.owl-carousel .owl-animated-in {
-  z-index: 0; }
+@media screen and (max-width:576px) {
+    .header{
+        background-image: none;
+    }
+    
+    nav,
+    nav > ul,
+    .banner,
+    .skills-container,
+    .resume-container,
+    .about-info-container,
+    footer {
+        flex-direction: column;
+    }
 
-.owl-carousel .owl-animated-out {
-  z-index: 1; }
+    nav > ul {
+        gap: 10px;
+    }
 
-.owl-carousel .fadeOut {
-  animation-name: fadeOut; }
+    .banner .profile-pic{
+        width: 100%;
+    }
 
-@keyframes fadeOut {
-  0% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }
+    .banner,
+    #what-i-do-description {
+        padding: 20px;
+    }
 
-/*
- * 	Owl Carousel - Auto Height Plugin
- */
-.owl-height {
-  transition: height 500ms ease-in-out; }
+    footer, .about {
+        padding: 10px;
+    }
 
-/*
- * 	Owl Carousel - Lazy Load Plugin
- */
-.owl-carousel .owl-item {
-  /**
-			This is introduced due to a bug in IE11 where lazy loading combined with autoheight plugin causes a wrong
-			calculation of the height of the owl-item that breaks page layouts
-		 */ }
-  .owl-carousel .owl-item .owl-lazy {
-    opacity: 0;
-    transition: opacity 400ms ease; }
-  .owl-carousel .owl-item .owl-lazy[src^=""], .owl-carousel .owl-item .owl-lazy:not([src]) {
-    max-height: 0; }
-  .owl-carousel .owl-item img.owl-lazy {
-    transform-style: preserve-3d; }
+    .btn-primary{
+        margin-bottom: 15px;
+    }
 
-/*
- * 	Owl Carousel - Video Plugin
- */
-.owl-carousel .owl-video-wrapper {
-  position: relative;
-  height: 100%;
-  background: #000; }
+    .footer-column {
+        width: 100%;
+    }
 
-.owl-carousel .owl-video-play-icon {
-  position: absolute;
-  height: 80px;
-  width: 80px;
-  left: 50%;
-  top: 50%;
-  margin-left: -40px;
-  margin-top: -40px;
-  background: url("owl.video.play.png") no-repeat;
-  cursor: pointer;
-  z-index: 1;
-  -webkit-backface-visibility: hidden;
-  transition: transform 100ms ease; }
+    .contact input[type="text"],
+    .contact input[type="email"],
+    textarea {
+        width: 80%;
+    }
+}
 
-.owl-carousel .owl-video-play-icon:hover {
-  -ms-transform: scale(1.3, 1.3);
-      transform: scale(1.3, 1.3); }
-
-.owl-carousel .owl-video-playing .owl-video-tn,
-.owl-carousel .owl-video-playing .owl-video-play-icon {
-  display: none; }
-
-.owl-carousel .owl-video-tn {
-  opacity: 0;
-  height: 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  transition: opacity 400ms ease; }
-
-.owl-carousel .owl-video-frame {
-  position: relative;
-  z-index: 1;
-  height: 100%;
-  width: 100%; }
-    </style>
-
+@media screen and (min-width:576px) and (max-width:960px) {
+    footer {
+        padding: 30px;
+    }
+    .btn-primary{
+        margin-bottom: 15px;
+    }
+		}
+	</style>
 </head>
 
 <body>
-  <header class="header">
-    <div class="container">
-      <nav class="navbar">
-        <a href="#" class="nav-logo">
-          <img src="image/ui.ico" alt="">
-        </a>
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="#" class="nav-link active">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="#sec1" class="nav-link">about</a>
-          </li>
-          <li class="nav-item">
-            <a href="#sec3" class="nav-link">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a href="#sec2" class="nav-link">works</a>
-          </li>
-          <li class="nav-item">
-            <a href="#sec4" class="nav-link">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a href="#sec5" class="nav-link">Contact</a>
-          </li>
-        </ul>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+    <header class="header">
+        <nav>
+            <h3 class="nav-title">My <span class="text-primary">Portfolio</span></h3>
+            <ul>
+                <li><a href="">Portfolio</a></li>
+                <li><a href="">Blog</a></li>
+                <li><button class="btn-primary">Hire Me</button></li>
+            </ul>
+        </nav>
+        <div class="banner">
+            <div class="banner-content">
+                <h3 class="banner-greeting">Hello, This is</h3>
+                <h1 class="banner-title">Quazi Atin Islam</h1>
+                <p class="banner-description">A fresh cybersecurity enthusiast starting his career as a penetration tester.</p>
+                <button class="btn-primary"><i class="fa-solid fa-download"></i> Download CV</button>
+                <button class="btn-primary"><i class="fa-solid fa-phone"></i> Contact</button>
+            </div>
+            <img class="profile-pic" src="images/Resume-Photo.jpg" alt="">
         </div>
-      </nav>
-    </div>
-  </header>
-
-
-  <section class="home">
-    <div class="container flex">
-      <div class="left">
-        <div class="heading">
-          <div class="heading_top flex">
-            <div class="line"></div>
-            <div class="line line2"></div>
-            <i class="fas fa-circle"></i>
-            <h3>Jr Pentester | Bug Hunter | CTF Player</h3>
-          </div>
-          <div class="heading_bottom">
-            <h1><span>Nazmul</span> Islam</h1>
-          </div>
-        </div>
-
-        <p> Passionate bug hunter, Jr. Pentester, and CTF player with 1+ year of cybersecurity experience. Specializing in web app security, OSINT, steganography, and digital forensics. Proficient in Python, C, Bash. Strong teamwork and creative problem-solving skills.</p>
-        <div class="button">
-       <a href="#sec1"> <button class="btn2">About Me</button> </a>
-        </div>
-      </div>
-
-      <div class="right">
-        <div class="dots">
-          <i class="fas fa-circle"></i>
-          <i class="fas fa-circle"></i>
-          <i class="fas fa-circle"></i>
-        </div>
-
-        <img src="image/ui2.png" alt="">
-
-        <div class="icon flex">
-         <a href="https://x.com/VaiRushbruh0?t=1Apssub_GYvMRRuiebaH4A&s=09">  <i class="fab fa-twitter"></i> </a>
-         <a href="https://www.linkedin.com/in/pentester-nazmul-islam/"> <i class="fab fa-linkedin-in"></i> </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="sec1" class="about mtop background2">
-    <div class="container flex">
-      <div class="right">
-        <div class="heading">
-          <div class="heading_top flex">
-            <div class="line"></div>
-            <div class="line line2"></div>
-            <i class="fas fa-circle"></i>
-            <h3> About Me </h3>
-          </div>
-          <div class="heading_bottom">
-            <h2><span>Hey it's Nazmul</span></h2>
-          </div>
-          <h4>A Bug Hunter and Jr. Pentester</h4>
-        </div>
-        <p>A passionate bug hunter, Jr. Pentester, and CTF player with over 1 year of experience in the cybersecurity field. Specializing in web application security, I have honed my skills in identifying vulnerabilities and providing valuable solutions. With expertise in OSINT, steganography, and digital forensics, I possess a comprehensive understanding of the cyber landscape. As a CompTIA Pentest+ certified professional, I am proficient in C, Python, and Bash scripting, enabling me to automate security processes and enhance efficiency. My strong teamwork abilities and creative mindset allow me to collaborate effectively and think outside the box when tackling complex challenges. With a solid foundation in Linux and Linux privilege escalation techniques, I strive to contribute to safeguarding digital ecosystems and ensuring robust cybersecurity measures.</p>
-       <a href="https://drive.google.com/file/d/1XvDnlc3mkkKDNJ17m4oT1S4LAJfP-4qr/view?usp=sharing" > <button class="btn2 btn3" download>Download CV</button> </a>
-      </div>
-    </div>
-  </section>
-
-
-
-
-  <section class="services mtop">
-    <div id="sec2" class="container">
-      <div class="heading heading2">
-        <div class="heading_top flex">
-          <div class="line"></div>
-          <div class="line line2"></div>
-          <i class="fas fa-circle"></i>
-          <h3> Projects</h3>
-        </div>
-        <div class="heading_bottom">
-          <h2><span>My Recent Project</span></h2>
-        </div>
-      </div>
-
-
-      <div class="content grid top">
-        <div class="box">
-          <div class="img">
-            <img src="https://img.icons8.com/ios-filled/50/ffffff/web.png" />
-          </div>
-          <div class="text">
-            <h3>Basic Linux System Enumeration Script</h3>
-            <hr>
-            <p>Recently i build basic Linux Enumeration Tool Based on Bash script.</p>
-            <a href="https://github.com/Nazmul8091/sys-enum">Tool Link</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-
-  <section id="sec3" class="skills mtop background2">
-    <div class="container flex">
-      <div class="left">
-        <div class="heading">
-          <div class="heading_top flex">
-            <div class="line"></div>
-            <div class="line line2"></div>
-            <i class="fas fa-circle"></i>
-            <h3> Expertise</h3>
-          </div>
-          <div class="heading_bottom">
-            <h2><span>My Skills </span></h2>
-          </div>
-        </div>
-
-        <div class="text">
-          <h3>Every Day is a New Challenge</h3>
-          <p>
-            <b>I always try to learn something new and currently what I can do is:</b> Networking, Some programming, Pentesting, Bug Hunting Linux, Osint, Recon, Stenography
-            operating system, System security,
-            Digital Forensic, VAPT etc.</p>
-
-         <a href="https://www.linkedin.com/in/pentester-nazmul-islam/"> <button class="btn2 btn3">Hire Me</button> </a>
-        </div>
-      </div>
-
-
-      <div class="right">
-        <!-- line skill bars-->
-        <div class="line_content">
-          <div class="line flex1">
-            <p>WEB PENTESTING
+    </header>
+    <main>
+        <section class="about">
+            <h3 class="section-title">About Me</h3>
+            <p class="section-description">
+                I'm a Junior Penetration Tester with a passion for Vulnerability Assessment & Penetration Testing. I enjoy working with various profesional tools such as BurpSuite, Nmap, Metasploit and so on. I stay motivated to deliver reports on time. Looking forward to achieving the epitome of professionalism.
             </p>
-            <div class="bar">
-              <div class="line_bar html"> </div>
-            </div>
-            <h5>85</h5>
-          </div>
-
-          <div class="line">
-            <p>Active
-              Directory</p>
-            <div class="bar">
-              <div class="line_bar css"></div>
-            </div>
-            <h5>75</h5>
-          </div>
-
-          <div class="line">
-            <p>Linux</p>
-            <div class="bar">
-              <div class="line_bar photo"> </div>
-            </div>
-            <h5>80</h5>
-          </div>
-        </div>
-        <!-- line skill bars-->
-
-
-        <div class="skill-container flex1">
-          <div class="circle_box">
-            <svg class="skill-circle" height="150" width="150">
-              <circle cx="-40" cy="10" r="48" style="stroke-dasharray: 264px;" transform="translate(50,50) rotate(-90)"></circle>
-              <text id="text1" x="40" y="100" fill="#fff" font-family="Verdana" font-size="28">80</text>
-            </svg>
-           <h4>Osint/stenography</h4>
-          </div>
-
-          <div class="circle_box">
-            <svg class="skill-circle" height="150" width="150">
-              <circle cx="-40" cy="10" r="48" style="stroke-dasharray: 180px;" transform="translate(50,50) rotate(-90)"></circle>
-              <text id="text1" x="40" y="100" fill="#fff" font-family="Verdana" font-size="28">60</text>
-            </svg>
-            <h4>Python/C </h4>
-          </div>
-
-          <div class="circle_box">
-            <svg class="skill-circle" height="150" width="150">
-              <circle cx="-40" cy="10" r="48" style="stroke-dasharray: 150px;" transform="translate(50,50) rotate(-90)"></circle>
-              <text id="text1" x="40" y="100" fill="#fff" font-family="Verdana" font-size="28">50</text>
-            </svg>
-            <h4>Digital Forensic </h4>
-          </div>
-        </div>
-      </div>
-  </section>
-  <section class="portfolio mtop">
-    <div class="container">
-      <div class="content flex1">
-        <div class="heading">
-          <div class="heading_top flex">
-            <div class="line"></div>
-            <div class="line line2"></div>
-            <i class="fas fa-circle"></i>
-          </div>
-          <div class="heading_bottom">
-            <h2><span>My Certifications </span></h2>
-          </div>
-        </div>
-
-        <ul class="filter-menu">
-          <li data-target="all">All</li>
-          <li data-target="cyber">Ethical Hacking</li> 
-          <li data-target="forensic">Digital Forensic</li>
-        </ul>
-      </div>
-
-      <!-- Filter portfolio -->
-      <div class="box">
-        <ul class="filter-item">
-          <li class="filter_container" style="flex-grow: 1" data-item="cyber">
-            <img src="image/cert1.jpg" alt="Avatar" class="image">
-            <div class="overlay">
-              <div class="text">
-                <h4>Ethical Hacking For Professional by Byte Capsule</h4>
-              </div>
-            </div>
-          </li>
-          <li class="filter_container" style="flex-grow: 1" data-item="forensic">
-            <img src="image/cert4.jpg" alt="Avatar" class="image">
-            <div class="overlay">
-              <div class="text">
-                <h4>The Complete Computer Forensics Course for 2023 PRO : CFCT+
-                  by Udemy</h4>
-              </div>
-            </div>
-          </li>
-          <li class="filter_container" style="flex-grow: 8" data-item="cyber">
-            <img src="image/cert2.jpg" alt="Avatar" class="image">
-            <div class="overlay">
-              <div class="text">
-                <h4>6 Months Training Program "Cybersecurity for Professionals"
-                  by Byte Capsule</h4>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <!-- Filter portfolio -->
-    </div>
-  </section>
-
-
-  <section class="experience background2">
-    <div class="container">
-      <div class="heading center">
-        <div class="heading_top flex">
-          <div class="line"></div>
-          <div class="line line2"></div>
-          <i class="fas fa-circle"></i>
-          <h3> Education</h3>
-        </div>
-        <div class="heading_bottom">
-          <h2><span>Education </span></h2>
-        </div>
-      </div>
-
-
-      <div class="content flex">
-        <div class="right">
-          <!--     timeline    -->
-          <div class="timeline">
-            <div class="line">
-            </div>
-            <div class="content content-1">
-              <section>
-                <i class="icon fas fa-book-open"></i>
-                <div class="details">
-                  <span> 2020 - 2023</span>
-                  <h3>TAISIR - HEDAYETUNNAH</h3>
+            <div class="about-info-container">
+                <!-- .about-info*4>h4.info-title+p.info-description -->
+                <div class="about-info">
+                    <h4 class="info-title">Name:</h4>
+                    <p class="info-description">Quazi Atin Islam </p>
                 </div>
-                <p> Jamia Muhammadia Arabia</p>
-              </section>
-            </div>
-
-            <div class="content content-1">
-              <section>
-                <i class="icon fas fa-book-open"></i>
-                <div class="details">
-                  <span> 2019</span>
-                  <h3>Hifz</h3>
+                <div class="about-info">
+                    <h4 class="info-title">Email:</h4>
+                    <p class="info-description">pentester.atinislam@gmail.com</p>
                 </div>
-                <p> Markazul Ulumil Quran.</p>
-              </section>
+                <div class="about-info">
+                    <h4 class="info-title">Job Description:</h4>
+                    <p class="info-description">Jr. Pentester (Intern)</p>
+                </div>
+                <div class="about-info">
+                    <h4 class="info-title">From:</h4>
+                    <p class="info-description">Dhaka, Bangladesh</p>
+                </div>
             </div>
-              </section>
+        </section>
+
+        <!-- what i do section start -->
+        <section>
+            <h3 class="section-title">What I do</h3>
+            <p id="what-i-do-description" class="section-description">
+                I have been learning and practicing various espects of penetration testing for over a year now. Below is a quick
+                overview of my main technical skill sets and technologies i use. Want to find out more about my projects?
+                Below, there are some of the tools I use on a regular basis regarding my projects or labs:
+            </p>
+            <div class="skills-container">
+                <!-- .skill*4>img+h3.skill-title+p.skill-description -->
+                <div class="skill">
+                    <img src="images/icons/metasploit.jpg" alt="">
+                    <h3 class="skill-title">Metasploit</h3>
+                    <p class="skill-description">
+                        Metasploit, a powerful pen-testing tool, helps security pros discover and exploit system weaknesses. It scans for vulnerabilities, launches simulated attacks, and even lets you build custom security modules. While valuable for ethical hackers, remember: responsible use only, different versions exist, and cybersecurity knowledge is key!</p>
+                </div>
+                <div class="skill">
+                    <img src="images/icons/burpsuite.jpg" alt="">
+                    <h3 class="skill-title">Burpsuite</h3>
+                    <p class="skill-description">
+                        Burp Suite acts as a "pen tester's toolkit" for web security. Intercepting web traffic, automating vulnerability scans, offering manual analysis tools, and being extendable with community-built features, it empowers both security professionals and curious learners to explore and understand web vulnerabilities, but always remember ethical and legal boundaries.</p>
+                </div>
+                <div class="skill">
+                    <img src="images/icons/bash.png" alt="">
+                    <h3 class="skill-title">Bash</h3>
+                    <p class="skill-description">Bash, a text-based interface and scripting language, unlocks your computer's power. Use it to directly control your system, automate tasks with scripts, and become a Linux/macOS ninja! Remember, the force is strong with this one, so use it wisely.</p>
+                </div>
+                <div class="skill">
+                    <img src="images/icons/python.jpg" alt="">
+                    <h3 class="skill-title">Python</h3>
+                    <p class="skill-description">Python, the programming rockstar, wows beginners with its easy-to-read code and vast potential. It tackles web apps, data, machine learning, and more, all while boasting a supportive community and free access. So grab your Python sword and start coding your dreams!</p>
+                </div>
             </div>
-          <!--     timeline    -->
-        </div>
-      </div>
-  </section>
+        </section>
+        <!-- Resume Section -->
+        <section>
+            <h3 class="section-title">A summary of My Resume</h3>
 
+            <div class="resume-container">
+                <!-- .resume-column*2>h3.resume-column-title -->
+                <div class="resume-column">
+                    <h3 class="resume-column-title">My Education & Training Program</h3>
 
-
-
-  <section id="sec4" class="blog ">
-    <div class="container">
-      <div class="heading heading2">
-        <div class="heading_top flex">
-          <div class="line"></div>
-          <div class="line line2"></div>
-          <i class="fas fa-circle"></i>
-          <h3>News & Blog </h3>
-        </div>
-        <div class="heading_bottom">
-          <h2><span>Some Tips & Activity </span></h2>
-        </div>
-      </div>
-
-
-
-        <div class="column">
-          <div class="box">
-            <img src="image/images.jpeg" alt="">
-            <div class="text">
-              <p>5 Fab,2024 </p>
-              <h4>Under Development</h4>
+                    <div class="resume-item">
+                        <h2 class="resume-item-title">Ethical Hacking for Professionals Training Program</h2>
+                        <h3 class="resume-item-institute"> Byte Capsule </h3>
+                        <p class="resume-item-description"> A professional training program specified in Web Penetration Testing. 
+                        </p>
+                    </div>
+                    <hr>
+                    <div class="resume-item">
+                        <h2 class="resume-item-title">BSc. in CSE</h2>
+                        <h3 class="resume-item-institute">Royal University of Dhaka </h3>
+                        <p class="resume-item-description">Bachelor of Science in Computer Science and Engineering(CSE)
+                        </p>
+                    </div>
+                    <hr>
+                    
+                </div>
+                <div class="resume-column">
+                    <h3 class="resume-column-title">My Projects & Labs</h3>
+                    <div class="resume-item">
+                        <h2 class="resume-item-title">Bug-hunting report on a live website</h2>
+                        <h3 class="resume-item-institute">Byte Capsule </h3>
+                        <p class="resume-item-description">Understanding of vulnerability management, 
+                            Creating report of web application security, 
+                            Found severity among other factors to determine remediation priority, 
+                            Detected and expolited vulnerabilities
+                        </p>
+                    </div>
+                    <hr>
+                    <div class="resume-item">
+                        <h2 class="resume-item-title">Penetration test report on a private lab</h2>
+                        <h3 class="resume-item-institute">Capstone </h3>
+                        <p class="resume-item-description">Detected reflected & stored XSS using XSS payload, 
+                            Critical findings using SQL Injection, 
+                            Discovered admin user credentials, 
+                            Modified POST request & uploaded shell using Burpsuite
+                        </p>
+                    </div>
+                    <hr>
+                    <div class="resume-item">
+                        <h2 class="resume-item-title">Red teaming on an personal lab</h2>
+                        <h3 class="resume-item-institute"> Active Directory lab </h3>
+                        <p class="resume-item-description">Captured NTLMv2 hash & cracked the password from received hash, 
+                            Discovered host & demonstrated SMB relay attack, 
+                            Enumerated domain with Bloodhound, 
+                            Exploited AD vulnerability with Crackmapexec, Mimikatz etc., 
+                            Explained the vulnerabilities with details and mitigation process
+                        </p>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <!-- Photo Grid -->
-
-    </div>
-  </section>
-
-
-
-
-  <section class="contact top">
-    <div class="container flex">
-      <div class="left">
-        <div class="heading">
-          <div class="heading_bottom">
-            <h2><span>Thank </span>You</h2>
-          </div>
-        </div>
-      </div>
-
-      <div class="right">
-        <div class="heading">
-          <div class="heading_top flex">
-            <div class="line"></div>
-            <div class="line line2"></div>
-            <i class="fas fa-circle"></i>
-            <h3>Any Question? </h3>
-          </div>
-          <div class="heading_bottom">
-            <h2><span>Drop Me A Line </span></h2>
-          </div>
-        </div>
-
-
-        <form action="https://api.web3forms.com/submit" method="POST" class="mtop">
-          <div class="input grid">
-            <input type="hidden" name="access_key" value="f14d7536-bd50-4b02-a7c4-10fd046fd97b">
-            <input type="text" placeholder="Name" required>
-            <input type="text" placeholder="Email" required>
-            <input type="text" placeholder="Subject">
-            <input type="text" placeholder="Phone">
-          </div>
-          <textarea name="message" rows="5" cols="80"></textarea>
-          <button class="btn2 btn3">Send Message</button>
-        </form>
-      </div>
-  </section>
-
-
-
-
-  <section id="sec5"class="social_media background2 ">
-    <div class="container">
-      <div class="social_icon ">
-        <div class="heading center">
-          <h2>Contact Me </h2>
-          <p>Contact me on any platform and i will happy to help you out </p>
-        </div>
-
-        <div class="content grid">
-          <div class="box">
-            <i class="fas fa-phone-alt"></i>
-            <div class="text">
-              <p>Call Me At:</p>
-              <span>01641194818</span>
+            <div class="download-cv">
+                <button class="btn-primary"><i class="fa-solid fa-download"></i> Download CV</button>
             </div>
-          </div>
-
-          <div class="box">
-            <i class="fas fa-envelope-open-text"></i>
-            <div class="text">
-              <p>Email At:</p>
-              <span>pentester.nazmulislam@gmail.com</span>
+        </section>
+    </main>
+    <!-- footer  -->
+    <footer>
+        <div class="footer-column">
+            <h3 class="section-title">Lets Connect</h3>
+            <p class="section-description">
+                Please fill out the form on this section to contact with me or call between 9:00 A.M and 5.00 P.M ET, Sunday through Thursday.
+            </p>
+            <div class="social-links">
+                <a href="https://tryhackme.com/p/KingQai"><img src="images/icons/tryhackme_logo_full.svg" alt=""></a>
+                <a href="https://github.com/atin-islam"><img src="images/icons/github.svg" alt=""></a>
+                <a href="https://www.linkedin.com/in/atin-islam/"><img src="images/icons/linkedin.svg" alt=""></a>
             </div>
-          </div>
-          <div class="box">
-            <i class="fab fa-twitter"></i>
-            <div class="text">
-              <p>Twitter:</p>
-              <span>@VaiRushbruh0</span>
-            </div>
-          </div>
-          <div class="box">
-            <i class="fab fa-linkedin-in"></i>
-            <div class="text">
-              <p>Linkedin:</p>
-              <span>linkedin.com/pentester-nazmul-islam/</span>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <div class="logo">
-        <img src="image/ui.ico" alt=""> 
-      </div>
-
-      <div class="content grid">
-        <div class="box">
-          <h4>Solutions</h4>
+        <div class="footer-column">
+            <h3 class="section-title">Let’s Message me. Right Now.</h3>
+            <form class="contact" action="">
+                <input type="text" placeholder="Your Name">
+                <input type="email" name="" placeholder="Your Email" id="">
+                <textarea name="" placeholder="Message" id="" cols="30" rows="10"></textarea>
+                <input class="btn-primary" type="submit" value="Submit">
+            </form>
         </div>
-
-
-        <div class="box">
-          <h4>Resources</h4>
-          <ul>
-            <li>Case Studies</li>
-            <li>Blog</li>
-          </ul>
-        </div>
-
-
-        <div class="box">
-          <div class="text">
-            <span>01641194818</span><br>
-            <label>itsanonymousbyte@gmail.com</label><br>
-            <p>Dhaka, Bangladesh</p>
-          </div>
-
-          <div class="icon flex1">
-          <a href="https://www.youtube.com/@rushbruh"> <i class="fab fa-youtube"></i> </a>
-           <a href="https://x.com/VaiRushbruh0?t=1Apssub_GYvMRRuiebaH4A&s=09"> <i class="fab fa-twitter"></i> </a> 
-           <a href="https://www.linkedin.com/in/pentester-nazmul-islam/"> <i class="fab fa-linkedin-in"></i> </a> 
-          </div>
-        </div>
-      </div>
-
-      <div class="legal flex1">
-        <div class="box">
-          <p>Copyright (c) 2024 Copyright Holder All Rights Reserved.</p>
-        </div>
-        <div class="box flex">
-          <p>Privacy Policy</p>
-          <p>Terms of Use</p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-
-
-  <!-- navbar  -->
-  <script>
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector(".nav-menu");
-
-    hamburger.addEventListener("click", mobileMenu);
-
-    function mobileMenu() {
-      hamburger.classList.toggle("active");
-      navMenu.classList.toggle("active");
-    }
-
-
-    window.addEventListener("scroll", function() {
-      var header = document.querySelector("header");
-      header.classList.toggle("sticky", window.scrollY > 0);
-    })
-  </script>
-  <!-- navbar  -->
-
-  <!-- portfolio filter JS -->
-  <script>
-    let sortBtn = document.querySelector('.filter-menu').children;
-    let sortItem = document.querySelector('.filter-item').children;
-
-    for (let i = 0; i < sortBtn.length; i++) {
-      sortBtn[i].addEventListener('click', function() {
-        for (let j = 0; j < sortBtn.length; j++) {
-          sortBtn[j].classList.remove('current');
-        }
-
-        this.classList.add('current');
-
-
-        let targetData = this.getAttribute('data-target');
-
-        for (let k = 0; k < sortItem.length; k++) {
-          sortItem[k].classList.remove('active');
-          sortItem[k].classList.add('delete');
-
-          if (sortItem[k].getAttribute('data-item') == targetData || targetData == "all") {
-            sortItem[k].classList.remove('delete');
-            sortItem[k].classList.add('active');
-          }
-        }
-      });
-    }
-  </script>
-  <!-- portfolio filter JS -->
-
-
-
-  <!--  Testimonials JS -->
-  <script>
-    $('.owl-carousel').owlCarousel({
-      loop: true,
-      margin: 10,
-      nav: false,
-      dots: true,
-      responsive: {
-        0: {
-          items: 1
-        },
-        768: {
-          items: 1
-        },
-        1000: {
-          items: 1
-        }
-      }
-    })
-  </script>
-  <!--  Testimonials JS -->
-
-
+    </footer>
 </body>
 
 </html>
+
+
